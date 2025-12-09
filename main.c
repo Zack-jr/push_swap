@@ -20,21 +20,22 @@
 // 
 
 
+// "a.out a b c d"
+
 int main(int ac, char **av)
 {
     if (ac == 1)
        return(ft_printf("error"), 1);
-    char *args = parsing(av + 1);
-    //int i = 0;
+    char **args = parsing((av));
+    int i = 0;
 
-    ft_printf("%s", args);
-    /*
-    while (i < 4)
+    //ft_printf("%s", args);
+    
+    while (i < 2)
     {
         ft_printf("%s", args[i]);
         i++;
-    }*/
-
+    }
 
     //int n = ft_atoi(av[1]);
     //ft_printf("%i", n);

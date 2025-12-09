@@ -20,4 +20,4 @@ typedef struct s_node
 }t_node;
 
 void    error(void);
-char    *parsing(char **av);
+char    **parsing(char **av);

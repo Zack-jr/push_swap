@@ -13,15 +13,16 @@
 #include "push_swap.h"
 
 
-// "abcde01245" "12331" 12 a 43
+// a.out "abcde01245" "12331" 12 a 43
 // get everything into a string
 // use the number as a reference to get the number of nodes we want to create
-char *parsing(char **av)
+char **parsing(char **av)
 {
     char *str;
     int i;
 
-    i = 0;
+    str = ft_strdup("");
+    i = 1; // skip binary
     while (av[i] != NULL)
     {
         str = ft_strjoin(str, av[i]);
@@ -30,5 +31,5 @@ char *parsing(char **av)
     }
    // ft_printf("%s", str);
 
-    return (str);
+    return (ft_split(str, '/'));
 }
