@@ -24,7 +24,7 @@ int main(int ac, char **av)
 {
     if (ac == 1)
        return(ft_printf("error"), 1);
-    char *args = parsing(av);
+    char *args = parsing(av + 1);
     //int i = 0;
 
     ft_printf("%s", args);

@@ -26,6 +26,7 @@ char *parsing(char **av)
     {
         str = ft_strjoin(str, av[i]);
         str = ft_strjoin(str, "/");
+        i++;
     }
    // ft_printf("%s", str);
 
