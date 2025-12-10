@@ -6,7 +6,7 @@
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:34:40 by zalabib-          #+#    #+#             */
-/*   Updated: 2025/12/10 19:50:14 by zalabib-         ###   ########.fr       */
+/*   Updated: 2025/12/10 20:06:18 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,4 @@ int main(int ac, char **av)
 
     //int n = ft_atoi(av[1]);
     //ft_printf("%i", n);
-}
+}//

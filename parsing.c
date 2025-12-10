@@ -6,7 +6,7 @@
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:24:37 by zalabib-          #+#    #+#             */
-/*   Updated: 2025/12/10 19:50:17 by zalabib-         ###   ########.fr       */
+/*   Updated: 2025/12/10 20:06:11 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char    **check_str(char *str)
     return (array);
 }
 
-
+//
 // j'ai une string avec tous les parametres
 // dans cette string je veux verifier si tous les parametres sonts bons, si ils le sont pas, error
 // si ils le sont, je dois 
