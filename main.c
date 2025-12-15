@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zalabib- <zalabib-@student.42madrid.com>   #+#  +:+       +#+        */
+/*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-12-09 15:34:40 by zalabib-          #+#    #+#             */
-/*   Updated: 2025-12-09 15:34:40 by zalabib-         ###   ########.fr       */
+/*   Created: 2025/12/09 15:34:40 by zalabib-          #+#    #+#             */
+/*   Updated: 2025/12/15 18:55:40 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,20 @@
 
 int main(int ac, char **av)
 {
-    if (ac == 1)
-       return(ft_printf("error"), 1);
-    char **args = parsing((av));
-    int i = 0;
+    char *joined;
+    char **tokens;
 
-    //ft_printf("%s", args);
-    
-    while (i < 2)
-    {
-        ft_printf("%s", args[i]);
-        i++;
-    }
+    if (ac < 2)
+        error("provide valid arguments");
+    joined = join_arguments(av + 1);
+    if (!joined)
+        error("error");
+    tokens = ft_split(joined);
+    free(joined);
+    if (!tokens || tokens_count(tokens) == 0)
+        error("error");
+    if (!check_tokens)
+        error("error");
 
-    //int n = ft_atoi(av[1]);
-    //ft_printf("%i", n);
+    free_tokens(tokens);
 }
