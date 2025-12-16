@@ -12,15 +12,11 @@
 
 #include "push_swap.h"
 
-
-// a.out "abcde01245" "12331" 12 a 43
-// get everything into a string
-// use the number as a reference to get the number of nodes we want to create
-
+// 
 char *join_arguments(char **av)
 {
     int i;
-    char *str
+    char *str;
 
     i = 0;
     while (av[i])
@@ -32,12 +28,12 @@ char *join_arguments(char **av)
     return (str);
 }
 
-int tokens_count(char **str)
+int tokens_count(char **tokens)
 {
     int i;
 
     i = 0;
-    while (av[i] != NULL)
+    while (tokens[i] != NULL)
         i++;
     return (i);
 }
@@ -45,11 +41,65 @@ int tokens_count(char **str)
 int check_tokens(char **tokens)
 {
     int i;
+    int n;
 
-    i = 0
-    while (tokens[i] != NULL)
+    i = 0;
+    while (tokens[i]!= NULL)
     {
-        if (token[i])
+        n = atol(token[i]);
+        if (!is_valid_format(tokens[i]))
+            return (0);
+        if (n > INT_MAX || n < INT_MIN)
+                return (0);
+        if (!check_duplicates) 
+                return (0);
         i++;
     }
+    return (1);
+}
+
+static int is_valid_format(char *token)
+{
+    int i;
+
+    i = 0;
+    if (!token)
+        error(please provide valid arguments);
+    while (token[i] != NULL)
+    {
+        if (token[i] == '+' || token[i] == '-')
+            i++;   
+        if (token[i] == '\0')
+            return (0);
+        if (!is_digit(token[i]))
+            return (0);
+        i++;
+    }
+    return (1);
+    
+}
+
+static int check_duplicates(char **tokens)
+{
+    int i;
+    int j;
+    int n1;
+    int n2;
+
+    i = 0;
+    while (tokens[i])
+    {
+        j = i + 1;
+        while (tokens[j])
+        {
+            n1 = atol(tokens[i]);
+            n2 = atol(tokens[j]);
+            if (n1 == n2)
+                return (0)
+            j++;           
+        }
+        i++;
+    }
+
+    return (1);
 }
