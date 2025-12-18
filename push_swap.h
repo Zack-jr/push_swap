@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zalabib- <zalabib-@student.42madrid.com>   #+#  +:+       +#+        */
+/*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-12-09 15:24:39 by zalabib-          #+#    #+#             */
-/*   Updated: 2025-12-09 15:24:39 by zalabib-         ###   ########.fr       */
+/*   Created: 2025/12/09 15:24:39 by zalabib-          #+#    #+#             */
+/*   Updated: 2025/12/18 19:37:26 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,8 @@ typedef struct s_node
     struct s_node *next;
 }t_node;
 
-void    error(void);
-char    **parsing(char **av);
+void    error(char *str);
+char *join_arguments(char **av);
+int tokens_count(char **tokens);
+int check_tokens(char **tokens);
+void    free_tokens(char **tokens);

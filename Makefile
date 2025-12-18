@@ -6,7 +6,7 @@ LFLAGS	= -g3
 RM		= rm -rf
 
 OBJDIR	= obj
-SOURCES	= main.c parsing.c
+SOURCES	= main.c parsing.c helpers.c error.c
 OBJECTS	= $(SOURCES:%.c=$(OBJDIR)/%.o)
 
 RED=\033[0;31m

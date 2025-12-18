@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zalabib- <zalabib-@student.42madrid.com>   #+#  +:+       +#+        */
+/*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-12-09 16:44:13 by zalabib-          #+#    #+#             */
-/*   Updated: 2025-12-09 16:44:13 by zalabib-         ###   ########.fr       */
+/*   Created: 2025/12/09 16:44:13 by zalabib-          #+#    #+#             */
+/*   Updated: 2025/12/18 18:44:19 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    error(void)
+void    error(char *str)
 {
-    ft_printf("error");
-    exit(33);
+    ft_printf("%s", str);
+    exit(1);
 }

@@ -6,11 +6,10 @@
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 12:19:03 by zalabib-          #+#    #+#             */
-/*   Updated: 2025/10/19 19:00:09 by zalabib-         ###   ########.fr       */
+/*   Updated: 2025/12/18 18:22:55 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/string.h>
 #include <stddef.h>
 #include "libft.h"
 
