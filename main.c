@@ -6,7 +6,7 @@
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:34:40 by zalabib-          #+#    #+#             */
-/*   Updated: 2025/12/18 19:29:06 by zalabib-         ###   ########.fr       */
+/*   Updated: 2025/12/21 17:24:42 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,13 @@ int main(int ac, char **av)
         error("please provide valid arguments\n");
     if (check_tokens(tokens))
         ft_printf("valid args\n");
+    int i = 0;
+    int n;
+    while (tokens[i] != NULL)
+    {
+        n = atol(tokens[i]);
+        printf("%i\n", n);
+        i++;
+    }
     free_tokens(tokens);
 }
