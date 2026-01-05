@@ -6,14 +6,16 @@
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 17:31:59 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/05 18:11:57 by zalabib-         ###   ########.fr       */
+/*   Updated: 2026/01/05 19:32:32 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    rotate_a(t_list **stack_a)
+#include "push_swap.h"
+
+void    rotate_a(t_node **stack_a)
 {
-    t_list *old_head;
-    t_list *last;
+    t_node *old_head;
+    t_node *last;
 
     if (!stack || !*stack || !(*stack))
         return;

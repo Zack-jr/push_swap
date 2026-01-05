@@ -6,13 +6,13 @@
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 17:21:22 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/05 17:31:56 by zalabib-         ###   ########.fr       */
+/*   Updated: 2026/01/05 19:47:38 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    swap_a(t_list **lst)
+void    swap_a(t_node **lst)
 {
     int n;
 
