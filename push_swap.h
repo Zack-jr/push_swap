@@ -6,7 +6,7 @@
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:24:39 by zalabib-          #+#    #+#             */
-/*   Updated: 2025/12/18 19:37:26 by zalabib-         ###   ########.fr       */
+/*   Updated: 2026/01/05 17:07:25 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ typedef struct s_node
     struct s_node *next;
 }t_node;
 
-void    error(char *str);
+void    error(void);
 char *join_arguments(char **av);
 int tokens_count(char **tokens);
 int check_tokens(char **tokens);

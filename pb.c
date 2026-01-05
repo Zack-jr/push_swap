@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/09 16:44:13 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/05 17:07:07 by zalabib-         ###   ########.fr       */
+/*   Created: 2026/01/05 17:32:09 by zalabib-          #+#    #+#             */
+/*   Updated: 2026/01/05 17:53:56 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <unistd.h>
 
-void    error(void)
+void    push_b(t_list **stack_a, t_list **stack_b)
 {
-    write(2, "Error\n", 6);
-    exit(1);
+    if (!stack_a || !stack_b)
+        return;
+    t_list *tmp;
+
+    tmp = *stack_a;
+    *stack_a = (*stack_a)->next;
+    *tmp->next = *stack_b;
+    *stack_b = tmp;
+
+    ft_printf("pb\n");
 }

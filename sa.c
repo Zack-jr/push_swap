@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   sa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/09 16:44:13 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/05 17:07:07 by zalabib-         ###   ########.fr       */
+/*   Created: 2026/01/05 17:21:22 by zalabib-          #+#    #+#             */
+/*   Updated: 2026/01/05 17:31:56 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <unistd.h>
 
-void    error(void)
+void    swap_a(t_list **lst)
 {
-    write(2, "Error\n", 6);
-    exit(1);
+    int n;
+
+    if (!lst || !*lst || !**lst)
+        return;
+    n = (*lst)->content;
+    (*lst)->content = (*lst)->next->content;
+    (*lst)->next->content = n;
+    ft_printf("sa\n");
 }

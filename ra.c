@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ra.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/09 16:44:13 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/05 17:07:07 by zalabib-         ###   ########.fr       */
+/*   Created: 2026/01/05 17:31:59 by zalabib-          #+#    #+#             */
+/*   Updated: 2026/01/05 18:11:57 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include <unistd.h>
-
-void    error(void)
+void    rotate_a(t_list **stack_a)
 {
-    write(2, "Error\n", 6);
-    exit(1);
+    t_list *old_head;
+    t_list *last;
+
+    if (!stack || !*stack || !(*stack))
+        return;
+    old_head = *stack_a;
+    *stack_a = (*stack_a)->next;
+    last = *stack_a;
+    while (last->next != NULL)
+        last = last->next;
+    last->next = old_head;
+
+    old_head->next = NULL;
+    ft_printf("ra\n");
 }

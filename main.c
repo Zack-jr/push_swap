@@ -6,7 +6,7 @@
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:34:40 by zalabib-          #+#    #+#             */
-/*   Updated: 2025/12/21 17:24:42 by zalabib-         ###   ########.fr       */
+/*   Updated: 2026/01/05 17:07:03 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,16 @@ int main(int ac, char **av)
     char **tokens;
 
     if (ac < 2)
-        error("provide valid arguments\n");
+        error();
     joined = join_arguments(av + 1);
     if (!joined)
-        error("error\n");
+        error();
     tokens = ft_split(joined, ' ');
     free(joined);
     if (!tokens || tokens_count(tokens) == 0)
-        error("please provide valid arguments\n");
+        error();
     if (!check_tokens(tokens))
-        error("please provide valid arguments\n");
+        error();
     if (check_tokens(tokens))
         ft_printf("valid args\n");
     int i = 0;

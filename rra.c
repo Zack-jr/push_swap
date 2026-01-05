@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   rra.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/09 16:44:13 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/05 17:07:07 by zalabib-         ###   ########.fr       */
+/*   Created: 2026/01/05 17:32:02 by zalabib-          #+#    #+#             */
+/*   Updated: 2026/01/05 18:29:54 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <unistd.h>
 
-void    error(void)
+void    reverse_rotate_a(t_list **stack_a)
 {
-    write(2, "Error\n", 6);
-    exit(1);
+    t_list *old_head;
+    t_list *last;
+
+    if (!stack || !*stack || !(*stack))
+        return;
+
+    
 }
