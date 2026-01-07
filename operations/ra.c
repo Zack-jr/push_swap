@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sa.c                                               :+:      :+:    :+:   */
+/*   ra.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 17:21:22 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/05 19:47:38 by zalabib-         ###   ########.fr       */
+/*   Created: 2026/01/05 17:31:59 by zalabib-          #+#    #+#             */
+/*   Updated: 2026/01/07 18:56:08 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void    swap_a(t_node **lst)
+void    ra(t_node **stack_a)
 {
-    int n;
+    t_node *old_head;
+    t_node *last;
 
-    if (!lst || !*lst || !**lst)
+    if (!stack_a || !*stack_a || !(*stack_a))
         return;
-    n = (*lst)->content;
-    (*lst)->content = (*lst)->next->content;
-    (*lst)->next->content = n;
-    ft_printf("sa\n");
+    old_head = *stack_a;
+    *stack_a = (*stack_a)->next;
+    old_head->next = NULL;
+
+    last = *stack_a;
+    while (last->next != NULL)
+        last = last->next;
+    last->next = old_head;
+
+    ft_printf("ra\n");
 }

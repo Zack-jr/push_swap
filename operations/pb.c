@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rra.c                                              :+:      :+:    :+:   */
+/*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 17:32:02 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/05 19:32:22 by zalabib-         ###   ########.fr       */
+/*   Created: 2026/01/05 17:32:09 by zalabib-          #+#    #+#             */
+/*   Updated: 2026/01/07 18:58:45 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void    reverse_rotate_a(t_node **stack_a)
+void    pb(t_node **stack_a, t_node **stack_b)
 {
-    t_node *last;
-    t_node *current;
-
-    if (!stack_a || !*stack_a || !(*stack_a))
+    if (!stack_a || !*stack_a)
         return;
-    current = *stack_a;
-    while (current->next->next != NULL)
-        current = current->next;
-    last = current->next;
-    current->next = NULL;
-    last->next = *stack_a;
-    (*stack_a) = last;
-    ft_printf("rra\n");
+    t_node *tmp;
+
+    tmp = *stack_a;
+    *stack_a = (*stack_a)->next;
+    tmp->next = *stack_b;
+    *stack_b = tmp;
+
+    ft_printf("pb\n");
 }

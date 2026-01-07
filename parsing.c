@@ -6,13 +6,12 @@
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:24:37 by zalabib-          #+#    #+#             */
-/*   Updated: 2025/12/18 19:37:23 by zalabib-         ###   ########.fr       */
+/*   Updated: 2026/01/07 18:34:12 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// 
 char *join_arguments(char **av)
 {
     int i;

@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorting.c                                          :+:      :+:    :+:   */
+/*   helpers2.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 18:00:19 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/06 20:07:24 by zalabib-         ###   ########.fr       */
+/*   Updated: 2026/01/07 19:01:31 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
 
 void    init_stack_a(t_node **stack, char **tokens)
 {
@@ -27,6 +28,7 @@ void    init_stack_a(t_node **stack, char **tokens)
         ft_lstadd_back_bis(stack, new);
         i++;
     }
+    new->next = NULL;
 }
 void    sort_array(int *arr, int size)
 {
@@ -90,6 +92,7 @@ void    index_stack(t_node *stack)
     }
     free(arr);
 }
+
 
 
 

@@ -6,7 +6,7 @@
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 14:38:37 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/06 18:16:59 by zalabib-         ###   ########.fr       */
+/*   Updated: 2026/01/07 18:51:13 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_swap(int *a, int *b)
 	*a = *b;
 	*b = tmp;
 }
+
 void	ft_lstadd_back_bis(t_node **lst, t_node *new)
 {
 	t_node	*last;
@@ -63,13 +64,12 @@ void    free_tokens(char **tokens)
 int	stack_size(t_node *stack)
 {
 	int i;
-	t_node *tmp;
 
 	i = 0;
-	while (tmp != NULL)
+	while (stack != NULL)
 	{
-		tmp = tmp->next;
 		i++;
+		stack = stack->next;
 	}
 	return (i);
 }
