@@ -6,7 +6,7 @@
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:24:37 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/07 18:34:12 by zalabib-         ###   ########.fr       */
+/*   Updated: 2026/01/11 17:15:51 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,8 @@ static int check_duplicates(char **tokens)
         j = i + 1;
         while (tokens[j])
         {
-            n1 = atol(tokens[i]);
-            n2 = atol(tokens[j]);
+            n1 = ft_atol(tokens[i]);
+            n2 = ft_atol(tokens[j]);
             if (n1 == n2)
                 return (0);
             j++;           
@@ -92,7 +92,7 @@ int check_tokens(char **tokens)
     i = 0;
     while (tokens[i]!= NULL)
     {
-        n = atol(tokens[i]);
+        n = ft_atol(tokens[i]);
         if (!is_valid_format(tokens[i]))
             return (0);
         if (n > INT_MAX || n < INT_MIN)

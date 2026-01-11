@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   radix.c                                            :+:      :+:    :+:   */
+/*   rra.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/07 18:05:00 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/11 17:11:05 by zalabib-         ###   ########.fr       */
+/*   Created: 2026/01/08 12:27:06 by zalabib-          #+#    #+#             */
+/*   Updated: 2026/01/08 14:11:07 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-#include "push_swap.h"
-
-void	sort_three(t_node **head)
+void    rra(t_node **stack_a)
 {
-	int	biggest;
+    t_node *last;
+    t_node *current;
 
-	biggest = find_biggest(*head);
-	if ((*head)->index == biggest)
-		rotate_a(head);
-	else if ((*head)->next->index == biggest)
-		r_rotate_a(head);
-	if ((*head)->index > (*head)->next->index)
-		swap_a(head);
+    if (!stack_a || !*stack_a || !(*stack_a))
+        return;
+    current = *stack_a;
+    while (current->next->next != NULL)
+        current = current->next;
+    last = current->next;
+    current->next = NULL;
+    last->next = *stack_a;
+    (*stack_a) = last;
+    ft_printf("rra\n");
 }
-

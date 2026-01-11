@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   radix.c                                            :+:      :+:    :+:   */
+/*   sa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/07 18:05:00 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/11 17:11:05 by zalabib-         ###   ########.fr       */
+/*   Created: 2026/01/08 12:28:01 by zalabib-          #+#    #+#             */
+/*   Updated: 2026/01/08 14:12:35 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-#include "push_swap.h"
-
-void	sort_three(t_node **head)
+void    sa(t_node **lst)
 {
-	int	biggest;
+    int n;
 
-	biggest = find_biggest(*head);
-	if ((*head)->index == biggest)
-		rotate_a(head);
-	else if ((*head)->next->index == biggest)
-		r_rotate_a(head);
-	if ((*head)->index > (*head)->next->index)
-		swap_a(head);
+    if (!lst || !*lst || !(*lst))
+        return;
+    n = (*lst)->content;
+    (*lst)->content = (*lst)->next->content;
+    (*lst)->next->content = n;
+    ft_printf("sa\n");
 }
-
