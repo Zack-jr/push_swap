@@ -6,24 +6,8 @@
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 18:05:00 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/11 17:11:05 by zalabib-         ###   ########.fr       */
+/*   Updated: 2026/01/11 18:46:48 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-#include "push_swap.h"
-
-void	sort_three(t_node **head)
-{
-	int	biggest;
-
-	biggest = find_biggest(*head);
-	if ((*head)->index == biggest)
-		rotate_a(head);
-	else if ((*head)->next->index == biggest)
-		r_rotate_a(head);
-	if ((*head)->index > (*head)->next->index)
-		swap_a(head);
-}
-
