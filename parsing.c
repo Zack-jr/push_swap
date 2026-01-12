@@ -6,27 +6,39 @@
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:24:37 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/11 17:15:51 by zalabib-         ###   ########.fr       */
+/*   Updated: 2026/01/12 19:09:11 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-char *join_arguments(char **av)
+char	*join_arguments(char **argv)
 {
-    int i;
-    char *str;
+	char	*res;
+	char	*tmp;
+	int		i;
 
-    i = 0;
-    str = ft_strdup("");
-    while (av[i])
-    {
-        str = ft_strjoin(str, av[i]);
-        str = ft_strjoin(str, " ");
-        i++;
-    }
-    return (str);
+	i = 0;
+	res = ft_strdup("");
+	if (!res)
+		return (NULL);
+	while (argv[i])
+	{
+		tmp = res;
+		res = ft_strjoin(tmp, argv[i]);
+		free(tmp);
+		if (!res)
+			return (NULL);
+		tmp = res;
+		res = ft_strjoin(tmp, " ");
+		free(tmp);
+		if (!res)
+			return (NULL);
+		i++;
+	}
+	return (res);
 }
+
 
 int tokens_count(char **tokens)
 {
