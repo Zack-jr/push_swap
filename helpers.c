@@ -6,7 +6,7 @@
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 14:38:37 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/11 16:48:07 by zalabib-         ###   ########.fr       */
+/*   Updated: 2026/01/13 16:43:18 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ft_swap(int *a, int *b)
 {
-	int tmp;
+	int	tmp;
+
 	tmp = *a;
 	*a = *b;
 	*b = tmp;
@@ -36,6 +37,7 @@ void	ft_lstadd_back_bis(t_node **lst, t_node *new)
 		last = last->next;
 	last->next = new;
 }
+
 t_node	*ft_lstnew_int(int n)
 {
 	t_node	*new_node;
@@ -48,22 +50,22 @@ t_node	*ft_lstnew_int(int n)
 	return (new_node);
 }
 
-void    free_tokens(char **tokens)
+void	free_tokens(char **tokens)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (tokens[i] != NULL)
-    {
-        free(tokens[i]);
-        i++;
-    }
-    free(tokens);
+	i = 0;
+	while (tokens[i] != NULL)
+	{
+		free(tokens[i]);
+		i++;
+	}
+	free(tokens);
 }
 
 int	stack_size(t_node *stack)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (stack != NULL)
@@ -73,6 +75,3 @@ int	stack_size(t_node *stack)
 	}
 	return (i);
 }
-
-
-
