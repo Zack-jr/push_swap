@@ -10,6 +10,6 @@ push_swap: Create a performant sorting algorithm The goal of the push_swap assig
 2. To compile you must first use the make command in order to get the ./push_swap program. Once you have it, you must enter a stack of numbers. The numbers can be negative, positive, 0, and within the 4 byte integer limit. If the input is not stated as correct, the program will simply print "Error\n".
 
 
-# Ressources
+# Resources
 
-Ressources : For my project, I read/watched diverse videos and articles, mainly to choose an algorithm that suited me. I used youtube or just plain google searches. I used AI to help me design the parser as I reviewed my pseudo-code with it. It gave me a better idea on how to structure my functions considering the norminette restrictions. I also used it to help me with the core of the Radix algorithm, which was quite difficult at the beggining. After finalizing the project, I asked AI for various inputs to try to make my program leak, or crash. I fixed the errors with a peer.
+Resources : For my project, I read/watched diverse videos and articles, mainly to choose an algorithm that suited me. I used youtube or just plain google searches. I used AI to help me design the parser as I reviewed my pseudo-code with it. It gave me a better idea on how to structure my functions considering the norminette restrictions. I also used it to help me with the core of the Radix algorithm, which was quite difficult at the beggining. After finalizing the project, I asked AI for various inputs to try to make my program leak, or crash. I fixed the errors with a peer.
