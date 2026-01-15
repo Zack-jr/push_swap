@@ -51,8 +51,10 @@ int	main(int argc, char **argv)
 
 	stack_a = NULL;
 	stack_b = NULL;
-	if (argc < 2 || argv[1][0] == '\0')
+	if (argc < 2)
 		return (0);
+	if (argv[1][0] == '\0')
+		error();
 	temp_str = join_arguments(argv + 1);
 	if (!temp_str)
 		cleanup_error(NULL, NULL, NULL);
