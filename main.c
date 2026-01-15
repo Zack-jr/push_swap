@@ -13,6 +13,20 @@
 #include "LIB_FT/libft.h"
 #include "push_swap.h"
 
+bool	check_valid(char *tmp)
+{
+	int	i;
+
+	i = 0;
+	while (tmp[i])
+	{
+		if (tmp[i] == '-' && i != 0)
+			return (false);
+		i++;
+	}
+	return (true);
+}
+
 static void	push_swap(t_node **stack_a, t_node **stack_b, char **tokens)
 {
 	init_stack_a(stack_a, tokens);
@@ -37,7 +51,7 @@ int	main(int argc, char **argv)
 
 	stack_a = NULL;
 	stack_b = NULL;
-	if (argc < 2)
+	if (argc < 2 || argv[1][0] == '\0')
 		return (0);
 	temp_str = join_arguments(argv + 1);
 	if (!temp_str)

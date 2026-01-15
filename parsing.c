@@ -24,6 +24,8 @@ char	*join_arguments(char **argv)
 		return (NULL);
 	while (argv[i])
 	{
+		if (!check_valid(argv[i]))
+			return (NULL);
 		tmp = res;
 		res = ft_strjoin(tmp, argv[i]);
 		free(tmp);

@@ -32,6 +32,8 @@ char	*join_arguments(char **av);
 int		tokens_count(char **tokens);
 int		check_tokens(char **tokens);
 void	free_tokens(char **tokens);
+// (In main.c) // 
+bool	check_valid(char *tmp);
 
 // helpers
 t_node	*ft_lstnew_int(int n);
