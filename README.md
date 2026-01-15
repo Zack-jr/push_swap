@@ -2,7 +2,8 @@
 
 # Description
 
-push_swap: Create a performant sorting algorithm The goal of the push_swap assignment is to create a program that will sort a stack of numbers using two stacks (a and b) and print the operations used in order to do so. Our goal is to sort the stack with the lowest possible number of operations. In the case of an error, our code shout print an error on the stderr file descriptor. My project is separated in 3 main parts, the parsing (input handling), the operations and the algorithm. 
+push_swap: Create a performant sorting algorithm.
+ The goal of the push_swap assignment is to create a program that will sort a stack of numbers using two stacks (a and b) and print the operations used in order to do so. Our goal is to sort the stack with the lowest possible number of operations. In the case of an error, our code shout print an error on the stderr file descriptor. My project is separated in 3 main parts, the parsing (input handling), the operations and the algorithm. 
 
 # Instructions
 
