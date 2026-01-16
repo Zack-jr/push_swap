@@ -6,26 +6,11 @@
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 18:05:00 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/13 16:36:14 by zalabib-         ###   ########.fr       */
+/*   Updated: 2026/01/16 17:08:02 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-bool	is_sorted(t_node *stack_a)
-{
-	t_node	*tmp;
-
-	tmp = stack_a;
-	while (tmp->next != NULL)
-	{
-		if (tmp->content > tmp->next->content)
-			return (false);
-		else
-			tmp = tmp->next;
-	}
-	return (true);
-}
 
 void	sort_three(t_node **stack_a)
 {
@@ -56,25 +41,47 @@ void	sort_three(t_node **stack_a)
 		rra(stack_a);
 }
 
-void	sort_small_stack(t_node **stack_a, t_node **stack_b)
+void	sort_four_and_five(t_node **a, t_node **b)
 {
-	int	size;
-
-	size = stack_size(*stack_a);
-	if (size <= 1 || is_sorted(*stack_a))
-		return ;
-	if (size == 2)
-		sa(stack_a);
-	else if (size == 3)
-		sort_three(stack_a);
-	else
+	while (stack_size(*a) > 3)
 	{
-		while (stack_size(*stack_a) > 3)
-			pb(stack_a, stack_b);
-		sort_three(stack_a);
-		while (*stack_b)
-			pa(stack_a, stack_b);
+		move_min_to_top(a);
+		pb(a, b);
 	}
+	if (stack_size(*a) == 2 && (*b)->index < (*b)->next->index)
+		sb(b);
+	sort_three(a);
+	while (*b)
+		pa(a, b);
+}
+
+void	move_min_to_top(t_node **a)
+{
+	t_node	*tmp;
+	int		min;
+	int		pos;
+	int		size;
+
+	tmp = *a;
+	min = INT_MAX;
+	pos = 0;
+	size = 0;
+	while (tmp)
+	{
+		if (tmp->index < min)
+		{
+			min = tmp->index;
+			pos = size;
+		}
+		tmp = tmp->next;
+		size++;
+	}
+	if (pos <= size / 2)
+		while (pos--)
+			ra(a);
+	else
+		while (pos++ < size)
+			rra(a);
 }
 
 void	sort_big_stack(t_node **stack_a, t_node **stack_b)

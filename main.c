@@ -6,7 +6,7 @@
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:34:40 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/13 16:45:15 by zalabib-         ###   ########.fr       */
+/*   Updated: 2026/01/16 17:07:35 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,37 @@ bool	check_valid(char *tmp)
 	return (true);
 }
 
+bool	is_sorted(t_node *stack_a)
+{
+	t_node	*tmp;
+
+	tmp = stack_a;
+	while (tmp->next != NULL)
+	{
+		if (tmp->content > tmp->next->content)
+			return (false);
+		else
+			tmp = tmp->next;
+	}
+	return (true);
+}
+
 static void	push_swap(t_node **stack_a, t_node **stack_b, char **tokens)
 {
+	int	elements;
+
 	init_stack_a(stack_a, tokens);
 	free_tokens(tokens);
 	simplify_stack(*stack_a);
+	elements = stack_size(*stack_a);
 	if (!is_sorted(*stack_a))
 	{
-		if (stack_size(*stack_a) <= 5)
-			sort_small_stack(stack_a, stack_b);
+		if (elements == 2)
+			sa(stack_a);
+		else if (elements == 3)
+			sort_three(stack_a);
+		else if (elements <= 5)
+			sort_four_and_five(stack_a, stack_b);
 		else
 			sort_big_stack(stack_a, stack_b);
 	}

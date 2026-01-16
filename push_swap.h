@@ -6,7 +6,7 @@
 /*   By: zalabib- <zalabib-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:24:39 by zalabib-          #+#    #+#             */
-/*   Updated: 2026/01/13 16:27:32 by zalabib-         ###   ########.fr       */
+/*   Updated: 2026/01/16 16:38:59 by zalabib-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,15 @@ void	pb(t_node **stack_a, t_node **stack_b);
 void	ra(t_node **stack_a);
 void	rra(t_node **stack_a);
 void	sa(t_node **lst);
+void	sb(t_node **lst);
 
 // algorithm
-bool	is_sorted(t_node *stack_a);
+
 void	simplify_stack(t_node *stack_a);
 void	sort_big_stack(t_node **stack_a, t_node **stack_b);
-void	sort_small_stack(t_node **stack_a, t_node **stack_b);
-
+void	sort_four_and_five(t_node **stack_a, t_node **stack_b);
+void	move_min_to_top(t_node **a);
+void	sort_three(t_node **stack_a);
+// (In main.c) //
+bool	is_sorted(t_node *stack_a);
 #endif
