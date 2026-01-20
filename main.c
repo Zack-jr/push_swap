@@ -82,8 +82,8 @@ int	main(int argc, char **argv)
 		cleanup_error(NULL, NULL, NULL);
 	tokens = ft_split(temp_str, ' ');
 	free(temp_str);
-	if (!tokens)
-		cleanup_error(NULL, NULL, NULL);
+	if (!tokens ||!tokens[0])
+		cleanup_error(NULL, NULL, tokens);
 	if (check_tokens(tokens) == 0)
 		cleanup_error(NULL, NULL, tokens);
 	push_swap(&stack_a, &stack_b, tokens);
